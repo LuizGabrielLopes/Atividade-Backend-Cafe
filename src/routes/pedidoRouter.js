@@ -3,8 +3,8 @@ const router = express.Router();
 const pedidoController = require("../controllers/pedidoController");
 
 router.get("/menu", pedidoController.getAllPedidos);
-router.get("/order", pedidoController.addPedidos);
+router.post("/order", pedidoController.addPedido);
 router.get("/order/:id", pedidoController.getPedidosById);
-router.get("/order/:id", pedidoController.deletePedido);
+router.delete("/order/:id", pedidoController.deletePedido);
 
 module.exports = router;

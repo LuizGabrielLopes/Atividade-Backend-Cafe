@@ -3,7 +3,7 @@ const cors = require("cors");
 const pedidosRoutes = require("./src/routes/pedidoRouter.js");
 
 const app = express();
-const PORT = 2080;
+const PORT = 4000;
 
 app.use(cors());
 app.use(express.json());
