@@ -43,11 +43,11 @@ const router = {
     deletePedido: (req, res) => {
         try {
             const { id } = req.params;
-            const pedido = pedido.getPedidosById(id);
+            const pedido = lista.getPedidosById(id);
             if (!pedido) {
                 return res.status(404).json({ message: "Pedido não encontrado" });
             }
-            if (pedido.status !== "Pendente" || pedido.status !== "Pronto") {
+            if (pedido.status !== "Pendente" && pedido.status !== "Pronto") {
                 return res.status(403).json({ message: "Não é possível deletar um pedido que já está em preparo ou pronto" });
             }
             lista.deletePedido(id);
