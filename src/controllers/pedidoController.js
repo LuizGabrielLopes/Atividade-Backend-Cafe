@@ -3,10 +3,10 @@ const ListaPedido = require("../models/ListaPedidos");
 
 const lista = new ListaPedido();
 
-lista.addPedido(new Pedido('Café Expresso', 13.99, 'Pendente'));
-lista.addPedido(new Pedido('Café Avelã', 20.99, 'Em andamento'));
-lista.addPedido(new Pedido('Café Brigadeiro', 19.99, 'Pronto'));
-lista.addPedido(new Pedido('Café com Leite', 13.99, 'Pendente'));
+lista.addPedido(new Pedido('Cappuccino', 10.99, 'Pendente'));
+lista.addPedido(new Pedido('Café Espresso', 7.99, 'Em andamento'));
+lista.addPedido(new Pedido('Café Extraforte', 12.99, 'Em andamento'));
+lista.addPedido(new Pedido('Café com Leite', 15.99, 'Pronto'));
 
 const router = {
     addPedido: (req, res) => {
